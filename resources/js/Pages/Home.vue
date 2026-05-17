@@ -3,7 +3,7 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
  defineProps({
 
-karts: Array // Приймаємо масив картів від Laravel
+karts: Array
 
 }); 
 </script>
@@ -14,9 +14,9 @@ karts: Array // Приймаємо масив картів від Laravel
     <AuthenticatedLayout>
         <template #header>
             <h2
-                class="text-xl font-semibold leading-tight text-gray-800"
+                class="text-xl font-semibold leading-tight text-white-800"
             >
-                Dashboard
+                Home
             </h2>
         </template>
 
