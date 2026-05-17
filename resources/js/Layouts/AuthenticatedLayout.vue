@@ -17,10 +17,10 @@ const showingNavigationDropdown = ref(false);
 <template>
     <div>
         <!-- Main viewport wrapper with global dark background and text styling -->
-        <div class="min-h-screen bg-backgroud text-sup-white">
+        <div class="min-h-screen bg-background text-sup-white">
             
             <!-- Header navigation bar panel with subtle bottom boundary line -->
-            <nav class="border-b border-backgroud-button bg-backgroud-panel">
+            <nav class="border-b border-background-button bg-background-panel">
                 
                 <!-- Content boundary container with responsive horizontal padding -->
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -46,6 +46,9 @@ const showingNavigationDropdown = ref(false);
                                 >
                                     Home
                                 </NavLink>
+                                <NavLink :href="route('about')" :active="route().current('about')">
+                                    Adout us
+                                </NavLink>
                             </div>
                         </div>
 
@@ -61,7 +64,7 @@ const showingNavigationDropdown = ref(false);
                                         <span class="inline-flex rounded-md">
                                             <button
                                                 type="button"
-                                                class="inline-flex items-center rounded-md border border-transparent bg-backgroud-button px-3 py-2 text-sup-white font-medium leading-4 transition duration-150 ease-in-out hover:text-white focus:outline-none"
+                                                class="inline-flex items-center rounded-md border border-transparent bg-background-button px-3 py-2 text-sup-white font-medium leading-4 transition duration-150 ease-in-out hover:text-white focus:outline-none"
                                             >
                                                 {{ $page.props.auth.user.name }}
 
@@ -99,7 +102,7 @@ const showingNavigationDropdown = ref(false);
                         <div class="-me-2 flex items-center sm:hidden">
                             <button
                                 @click="showingNavigationDropdown = !showingNavigationDropdown"
-                                class="inline-flex items-center justify-center rounded-md p-2 text-white-400 transition duration-150 ease-in-out hover:bg-backgroud-button hover:text-sup-white focus:bg-backgroud-button focus:text-sup-white focus:outline-none"
+                                class="inline-flex items-center justify-center rounded-md p-2 text-white-400 transition duration-150 ease-in-out hover:bg-background-button hover:text-sup-white focus:bg-background-button focus:text-sup-white focus:outline-none"
                             >
                                 <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                     <!-- Three-bar hamburger menu vector graphic segment -->
@@ -119,7 +122,7 @@ const showingNavigationDropdown = ref(false);
                 </div>
 
                 <!-- Toggled mobile menu element drawer container -->
-                <div :class="{ block: showingNavigationDropdown, hidden: !showingNavigationDropdown }" class="sm:hidden bg-backgroud-panel border-t border-backgroud-button">
+                <div :class="{ block: showingNavigationDropdown, hidden: !showingNavigationDropdown }" class="sm:hidden bg-background-panel border-t border-background-button">
                     
                     <!-- Main layout route items list for touchscreen viewports -->
                     <div class="space-y-1 pb-3 pt-2">
@@ -127,9 +130,10 @@ const showingNavigationDropdown = ref(false);
                             Home
                         </ResponsiveNavLink>
                     </div>
+                    
 
                     <!-- Lower settings area block for user credentials display -->
-                    <div class="border-t border-backgroud-button pb-1 pt-4">
+                    <div class="border-t border-background-button pb-1 pt-4">
                         
                         <!-- Text wrapper block showing user name and email values -->
                         <div class="px-4">
@@ -147,7 +151,7 @@ const showingNavigationDropdown = ref(false);
             </nav>
 
             <!-- Optional secondary layout header container row for specific section page titles -->
-            <header class="bg-backgroud-panel border-b border-backgroud-button shadow" v-if="$slots.header">
+            <header class="bg-background-panel border-b border-background-button shadow" v-if="$slots.header">
                 <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 text-sup-white">
                     <slot name="header" />
                 </div>

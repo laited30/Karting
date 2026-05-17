@@ -18,15 +18,15 @@ class KartFactory extends Factory
     {
         return [
             // Згенерує унікальний номер: "Карт №1", "Карт №2" тощо
-            'number' => 'Карт №' . $this->faker->unique()->numberBetween(1, 30),
+            'number' => 'Cart №' . $this->faker->unique()->numberBetween(1, 30),
             // Випадкова модель з трьох популярних брендів
             'model' => $this->faker->randomElement(['Rimo Alpha', 'Sodi RT8', 'MS Kart']), 
             // Випадкова потужність: 9 к.с. (для дітей/новачків) або 13-15 (для профі)
-            'power' => $this->faker->randomElement([9, 13, 15]), 
+            'power' => $this ->faker->randomElement([9, 13, 15]),
             // За замовчуванням робимо карт активним
-            'is_active' => true, 
+            'is_active' => $this->faker->randomElement([true, false]),
             // Випадковий коментар про стан карта
-            'notes' => $this->faker->randomElement(['Нова гума', 'Обкатаний двигун', 'Потребує ТО через 5 годин', 'В ідеальному стані']), 
+            'notes' => $this->faker->randomElement(['New rubber', 'Run-in engine', 'Requires maintenance in 5 hours', 'In perfect condition']), 
         ];
     }
 }

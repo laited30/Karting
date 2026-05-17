@@ -16,7 +16,7 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                backgroud: {
+                background: {
                     DEFAULT: '#111116',
                     panel: '#1e1e24',
                     button: '#262629',

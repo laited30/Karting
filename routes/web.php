@@ -22,6 +22,13 @@ Route::get('/home', function () {
     ]);
 })->middleware(['auth', 'verified'])->name('home');
 
+Route::get('/about', function () {
+    return Inertia::render('About', [
+        'title' => 'Вітаємо на сторінці Про нас!',
+        'content' => 'Це текст, який прийшов із бекенду Laravel.'
+    ]);
+})->middleware(['auth'])->name('about');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
