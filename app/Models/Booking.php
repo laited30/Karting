@@ -13,4 +13,13 @@ class Booking extends Model
         'end_time',
         'status',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function kart()
+    {
+        return $this->belongsTo(Kart::class);
+    }
 }

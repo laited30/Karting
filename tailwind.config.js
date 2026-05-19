@@ -25,7 +25,7 @@ export default {
                 },
                 border: {
                     DEFAULT: '#ff3b30',
-                    green: '#ccff00',
+                    green: '#5bfa21',
                 },
                 sup:{
                     DEFAULT: '',

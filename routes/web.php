@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookingController;
 use Inertia\Inertia;
 
 use App\Models\Kart;
@@ -28,6 +29,11 @@ Route::get('/about', function () {
         'content' => 'Це текст, який прийшов із бекенду Laravel.'
     ]);
 })->middleware(['auth'])->name('about');
+
+Route::middleware('auth')->group(function () {
+    Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
+    Route::get('/karts/{kart}/booked-times', [BookingController::class, 'bookedTimes'])->name('karts.booked-times');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
