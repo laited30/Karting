@@ -19,6 +19,7 @@ export default {
                 background: {
                     DEFAULT: '#111116',
                     panel: '#1e1e24',
+                    panel2: '#1b1b34',
                     button: '#262629',
                     input: '#313135',
                     text: '#212121',
