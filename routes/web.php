@@ -25,8 +25,8 @@ Route::get('/home', function () {
 
 Route::get('/about', function () {
     return Inertia::render('About', [
-        'title' => 'Вітаємо на сторінці Про нас!',
-        'content' => 'Це текст, який прийшов із бекенду Laravel.'
+        'title' => 'Welcom to page about us!',
+        'content' => 'This text frob backend Laravel.'
     ]);
 })->middleware(['auth'])->name('about');
 
