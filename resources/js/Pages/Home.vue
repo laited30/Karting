@@ -199,6 +199,34 @@ const closeModal = () => {
                 </div>
                 
             </div>
+            <div class="flex flex-col w-auto mx-8 mt-8 p-10 rounded-lg justify-center items-center">
+    
+                <h2 class="mb-6 text-xl font-bold bg-background-panel p-5 rounded-xl">Kontakt</h2>
+                
+                <div class="grid grid-cols-2 gap-4 w-full">
+                    <div class="flex flex-col text-xl justify-center bg-background-panel p-5 rounded-xl">
+                        <label for=""><i class="p-4 fa-solid fa-phone"></i> +48...........</label>
+                        <label for=""><i class="p-4 fa-solid fa-envelope"></i> email@gmail.com</label>
+                        <label for=""><i class="p-4 fa-brands fa-telegram"></i> +48...........</label>
+                        <label for=""><i class="p-4 fa-brands fa-viber"></i> +48...........</label>
+                        <label for=""><i class="p-4 fa-solid fa-map-location-dot"></i> I don`t know</label>
+                    </div>
+
+                    <div class="flex justify-center items-center">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10924.927634672535!2d172.50833657837282!3d-43.50987316839886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d31f52e0d8e89e1%3A0xa6661a7f3c4ee0a2!2sCOO%20Apples!5e0!3m2!1sru!2spl!4v1779653869518!5m2!1sru!2spl" 
+                            width="800" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-lg">
+                        </iframe>
+                    </div>
+                </div>
+                
+            </div>
         </div>
 
         <!-- Modal Window -->
