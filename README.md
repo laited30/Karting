@@ -1,58 +1,121 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# System Rezerwacji Gokartów (Go-Kart Booking System) 🏎️
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> **Uwaga:** Ten projekt został stworzony wyłącznie w celach edukacyjnych. Głównym celem było zdobycie praktycznego doświadczenia i poszerzenie umiejętności programowania, budowania architektury oraz integracji technologii **PHP, Vue.js i Laravel** w pełnoprawną aplikację Full-Stack.
 
-## About Laravel
+## Interfejs aplikacji
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<img width="2542" height="1143" alt="Screenshot_20260601_203027" src="https://github.com/user-attachments/assets/d6dd28df-26b4-482a-a6a9-68825b91c9de" />
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🛠 Stos technologiczny (Tech Stack)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Projekt został zbudowany przy użyciu nowoczesnych narzędzi, aby zapewnić wysoką wydajność i wygodę programowania:
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Backend
+* **PHP** — główny język logiki serwera.
+* **Laravel** — framework do budowy solidnej architektury (wykorzystano migracje, fabryki do danych testowych, systemy kolejek Jobs/Queues).
+* **Inertia.js** — routing i płynna komunikacja między backendem a frontendem, co pozwala na pracę bez tworzenia klasycznego REST API.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### Frontend
+* **Vue.js 3** — budowa reaktywnego interfejsu użytkownika (z wykorzystaniem nowoczesnego Composition API oraz `<script setup>`).
+* **Tailwind CSS** — framework narzędziowy do szybkiego i elastycznego stylowania komponentów, tworzenia responsywnego designu.
+* **Vite** — szybkie narzędzie do budowania frontendu.
 
-## Agentic Development
+### Baza danych (Database)
+* **PostgreSQL** — relacyjna baza danych do przechowywania informacji o użytkownikach, gokartach i sesjach rezerwacyjnych.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### Infrastruktura i środowisko
+* **Docker** — konteneryzacja aplikacji w celu szybkiego wdrażania i standaryzacji środowiska deweloperskiego.
 
-```bash
-composer require laravel/boost --dev
+---
 
-php artisan boost:install
-```
+## 💡 Główne funkcje (W skrócie)
+* Dynamiczne filtrowanie gokartów według ich statusu (Gotowe / W naprawie) po stronie klienta.
+* Interaktywne okna modalne do rezerwacji.
+* Niestandardowe efekty UI (np. animacja ripple przy kliknięciu przycisku).
+* Asynchroniczne przetwarzanie zadań w tle (Jobs).
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Go-Kart Booking System 🏎️
 
-## Security Vulnerabilities
+> **Note:** This project was developed exclusively for educational purposes. The main goal was to gain practical experience and improve programming skills, architecture design, and the integration of **PHP, Vue.js, and Laravel** technologies into a full-fledged Full-Stack application.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Application Interface
 
-## License
+<img width="2542" height="1143" alt="Screenshot_20260601_203027" src="https://github.com/user-attachments/assets/d6dd28df-26b4-482a-a6a9-68825b91c9de" />
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🛠 Tech Stack
+
+The project is built using modern tools to ensure high performance and development convenience:
+
+### Backend
+* **PHP** — the main language for server-side logic.
+* **Laravel** — framework for building a robust architecture (using migrations, factories for test data, Jobs/Queues systems).
+* **Inertia.js** — routing and seamless communication between the backend and frontend, allowing development without creating a classic REST API.
+
+### Frontend
+* **Vue.js 3** — building a reactive user interface (using the modern Composition API and `<script setup>`).
+* **Tailwind CSS** — a utility-first framework for rapid and flexible component styling, creating responsive design.
+* **Vite** — a fast frontend build tool.
+
+### Database
+* **PostgreSQL** — a relational database for storing information about users, go-karts, and booking sessions.
+
+### Infrastructure & Environment
+* **Docker** — application containerization for quick deployment and standardization of the development environment.
+
+---
+
+## 💡 Main Features (Briefly)
+* Dynamic client-side filtering of go-karts by their status (Ready / In Repair).
+* Interactive modal windows for booking.
+* Custom UI effects (e.g., ripple animation on button clicks).
+* Asynchronous background task processing (Jobs).
+
+
+
+
+# Система бронювання картингів (Go-Kart Booking System) 🏎️
+
+> **Примітка:** Цей проект був розроблений виключно з навчальною метою. Головним завданням було отримання практичного досвіду та поглиблення навичок програмування, побудови архітектури та інтеграції технологій **PHP, Vue.js та Laravel** у повноцінний Full-Stack додаток.
+
+## Інтерфейс додатку
+
+<img width="2542" height="1143" alt="Screenshot_20260601_203027" src="https://github.com/user-attachments/assets/d6dd28df-26b4-482a-a6a9-68825b91c9de" />
+
+---
+
+## 🛠 Технологічний стек (Tech Stack)
+
+Проект побудований з використанням сучасних інструментів для забезпечення високої продуктивності та зручності розробки:
+
+### Backend
+* **PHP** — основна мова серверної логіки.
+* **Laravel** — фреймворк для побудови надійної архітектури (використані міграції, фабрики для тестових даних, системи черг Jobs/Queues).
+* **Inertia.js** — маршрутизація та безшовний зв'язок між бекендом і фронтендом, що дозволяє працювати без створення класичного REST API.
+
+### Frontend
+* **Vue.js 3** — побудова реактивного інтерфейсу користувача (з використанням сучасного Composition API та `<script setup>`).
+* **Tailwind CSS** — утилітарний фреймворк для швидкої та гнучкої стилізації компонентів, створення адаптивного дизайну.
+* **Vite** — швидкий інструмент збірки фронтенду.
+
+### База даних
+* **PostgreSQL** — реляційна база даних для зберігання інформації про користувачів, картинги та сесії бронювання.
+
+### Інфраструктура та середовище
+* **Docker** — контейнеризація додатку для швидкого розгортання та стандартизації середовища розробки.
+
+---
+
+## 💡 Основний функціонал (Коротко)
+* Динамічна фільтрація картингів за їхнім статусом (Готові / В ремонті) на стороні клієнта.
+* Інтерактивні модальні вікна для бронювання.
+* Кастомні UI-ефекти (наприклад, анімація ripple при натисканні на кнопки).
+* Асинхронна обробка завдань у фоновому режимі (Jobs).
